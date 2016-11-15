@@ -7,6 +7,9 @@ ul {
   font-size: 15px;
 
 }
+li:hover {
+  transform: scale(1.5);
+}
 .bigFont li{font-size: 15px;}
 a {
   color: black;
