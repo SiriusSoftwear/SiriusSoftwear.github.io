@@ -4,5 +4,6 @@ body {
 ul {
   margin-top: 10px;
   list-style: none;
-  
+
 }
+.bigFont li{font-size: 15px;}
