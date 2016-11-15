@@ -1,11 +1,3 @@
-p {
-  color: red;
-}
-img {
-  border-color: green;
-  border-style: dashed;
-  border-width: thick;
-}
-.inhalt {
-  color: red;
+body {
+  background-image: url("background.jpg");
 }
