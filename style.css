@@ -1,8 +1,8 @@
 body {
   background-image: url("background.jpg");
 }
-.menu {
-  background-color: yellow;
-  width: 50%;
-  height: 20%;
+ul {
+  margin-top: 10px;
+  list-style: none;
+  
 }
