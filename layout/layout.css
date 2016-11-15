@@ -1,9 +1,9 @@
-.navi {
+#navi {
   float:left;
     width:13em;
     background-color:thistle;
 }
-.inhalte {
+#inhalte {
   margin-left: 14em;
    background-color:lightblue;
 }
