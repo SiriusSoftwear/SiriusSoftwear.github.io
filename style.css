@@ -8,3 +8,7 @@ ul {
 
 }
 .bigFont li{font-size: 15px;}
+a {
+  color: black;
+  text-decoration: none;
+}
