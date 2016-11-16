@@ -21,6 +21,20 @@ li a {
   border-width: thin;
   padding: 15px;
 }
+.item {
+  display: block;
+  width: 200px;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #F5545C;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  padding: 15px;
+}
 li a:hover {
   color: black;
   background-color: #e94641;
