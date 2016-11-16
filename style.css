@@ -29,6 +29,6 @@ h2:hover {
   background-color: red;
   font-size: 40px;
 }
-.menu:hover .items{
-  visibility: hidden;
+.menu:hover {
+  background-color: blue;
 }
