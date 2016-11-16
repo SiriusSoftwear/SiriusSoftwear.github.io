@@ -11,7 +11,7 @@ li a {
   width: 150px;
   padding: 8px 16px;
   text-decoration: none;
-  background-color: F5545C;
+  background-color: #F5545C;
   color: black;
 }
 li a:hover {
@@ -19,6 +19,6 @@ li a:hover {
   background-color: black;
 }
 .active {
-  color: red;
-  background-color: blue;
+  color: black;
+  background-color: #d92b35;
 }
