@@ -22,7 +22,6 @@ li a {
   padding: 15px;
 }
 .item {
-  display: block;
   width: 200px;
   padding: 8px 16px;
   text-decoration: none;
@@ -34,6 +33,7 @@ li a {
   border-color: black;
   border-width: thin;
   padding: 10px;
+  display: none;
 }
 li a:hover {
   color: black;
