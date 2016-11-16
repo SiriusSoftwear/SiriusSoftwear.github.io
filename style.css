@@ -19,10 +19,16 @@ a {
 h2:hover {
 
 }
+.items {
+  visibility: hidden;
+}
 .menu {
   border-color: red;
   border-width: thick;
   border-style: solid;
   background-color: red;
-  font-size: 30px;
+  font-size: 40px;
+}
+.menu:hover .items{
+  visibility: visible;
 }
