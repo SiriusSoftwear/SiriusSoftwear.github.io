@@ -7,18 +7,14 @@ ul {
   font-size: 15px;
 
 }
-li:hover {
-  transform: scale(1.2);
-}
-.bigFont li{font-size: 15px;}
 a {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
 }
 #menu ul ul {
-  visibility: hidden;
+  top: -9999px;
 }
 #menu ul li:hover ul {
-  visibility: visible;
+  top: 0px;
 }
