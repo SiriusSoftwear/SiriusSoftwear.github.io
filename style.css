@@ -16,16 +16,9 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 }
-h2:hover {
-
-}
-.menu {
-  border-color: red;
-  border-width: thick;
-  border-style: solid;
-  background-color: red;
-  font-size: 40px;
-}
-.menu:hover li {
+#menu ul ul {
   visibility: hidden;
+}
+#menu ul li:hover ul {
+  visibility: visible;
 }
