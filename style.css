@@ -33,14 +33,14 @@ li a {
   border-color: black;
   border-width: thin;
   padding: 10px;
-  display: block;
+  display: none;
 }
 li a:hover {
   color: black;
   background-color: #e94641;
 }
-.basic:hover .item {
-  background-color: black;
+.basic:hover .item{
+  display: block;
 }
 .active {
   color: black;
