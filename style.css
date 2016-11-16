@@ -30,5 +30,5 @@ h2:hover {
   font-size: 40px;
 }
 .menu:hover .items{
-  visibility: visible;
+  visibility: hidden;
 }
