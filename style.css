@@ -17,5 +17,11 @@ a {
   text-transform: uppercase;
 }
 h2:hover {
-  
+
+}
+.menu {
+  border-color: red;
+  border-width: medium;
+  border-style: solid;
+  background-color: red;
 }
