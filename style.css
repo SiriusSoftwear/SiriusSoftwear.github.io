@@ -39,6 +39,9 @@ li a:hover {
   color: black;
   background-color: #e94641;
 }
+li a:hover .item{
+  display:block;
+}
 .active {
   color: black;
   background-color: #d92b35;
