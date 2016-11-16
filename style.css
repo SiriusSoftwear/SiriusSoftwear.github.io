@@ -20,7 +20,7 @@ h2:hover {
 
 }
 .items {
-  visibility: hidden;
+  visibility: visible;
 }
 .menu {
   border-color: red;
