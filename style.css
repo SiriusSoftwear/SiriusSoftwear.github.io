@@ -51,4 +51,6 @@ li a:hover .item{
 li {
   text-align: center;
 }
-.show {display:block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
