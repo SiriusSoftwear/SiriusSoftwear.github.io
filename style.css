@@ -8,13 +8,13 @@ ul {
   }
 li a {
   display: block;
-  width: 150px;
+  width: 200px;
   padding: 8px 16px;
   text-decoration: none;
   background-color: #F5545C;
   color: black;
-  font-size: 30px;
-  font-weight: bolder;
+  font-size: 25px;
+  font-weight: bold;
 }
 li a:hover {
   color: black;
