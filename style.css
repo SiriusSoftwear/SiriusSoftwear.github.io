@@ -16,6 +16,10 @@ li a {
   color: black;
   font-size: 25px;
   font-weight: bold;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  padding: 15px;
 }
 li a:hover {
   color: black;
