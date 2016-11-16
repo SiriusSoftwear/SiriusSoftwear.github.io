@@ -33,7 +33,7 @@ li a {
   border-style: solid;
   border-color: black;
   border-width: thin;
-  padding: 15px;
+  padding: 10px;
 }
 li a:hover {
   color: black;
