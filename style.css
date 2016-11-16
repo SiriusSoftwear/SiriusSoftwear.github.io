@@ -19,9 +19,6 @@ a {
 h2:hover {
 
 }
-.items {
-  visibility: visible;
-}
 .menu {
   border-color: red;
   border-width: thick;
