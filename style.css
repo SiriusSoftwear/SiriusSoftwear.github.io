@@ -58,7 +58,7 @@ body {
   padding: 20px 20px 20px 20px;
 
 }
-#na:hover {
+.na:hover {
   color: red;
 }
 img {
