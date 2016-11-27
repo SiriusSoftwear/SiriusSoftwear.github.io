@@ -51,8 +51,11 @@ body {
   font-size: 20px;
   width: 90%;
   height: 500px;
-  background-color: red;
   margin-left: 5%;
+  border-style: solid;
+  border-color: #558C89;
+  border-width: medium;
+  padding: 20px 20px 20px 20px;
 
 }
 img {
