@@ -1,0 +1,27 @@
+body {
+  background-color: #ECECEA;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#seite {
+    position: relative;
+    min-height: 100%;
+    width: 550px;
+    margin: 0 auto;
+    background-color: silver;
+}
+
+#inhalt {
+    background-color: orange;
+}
+
+#fussbereich {
+    background-color: yellow;
+}
