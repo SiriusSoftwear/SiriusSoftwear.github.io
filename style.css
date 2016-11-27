@@ -18,7 +18,7 @@ body {
 }
 .content {
   width: 80%;
-  height: auto;
+  height: auto+20px;
   background-color: white;
   margin-left: 10%;
   margin-top: 15px;
@@ -52,15 +52,11 @@ body {
   width: 90%;
   height: auto;
   margin-left: 5%;
-  margin-bottom: 25px;
   border-style: solid;
   border-color: #D9853B;
   border-width: medium;
   padding: 20px 20px 20px 20px;
 
-}
-.na:hover .text {
-  background-color: red;
 }
 img {
   float: right;
