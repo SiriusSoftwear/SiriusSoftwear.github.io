@@ -55,6 +55,9 @@ body {
   margin-left: 5%;
 
 }
+img {
+  float: right;
+}
 ul {
   list-style-type: none;
   margin: 0;
