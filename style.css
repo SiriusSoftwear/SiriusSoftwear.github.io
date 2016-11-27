@@ -58,6 +58,9 @@ body {
   padding: 20px 20px 20px 20px;
 
 }
+#na:hover {
+  color: red;
+}
 img {
   float: right;
 }
