@@ -20,8 +20,13 @@ html, body {
 
 #inhalt {
     background-color: orange;
+    padding-bottom: 2em;
 }
 
 #fussbereich {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
     background-color: yellow;
+    height: 2em;
 }
