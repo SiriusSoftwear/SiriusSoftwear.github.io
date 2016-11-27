@@ -18,9 +18,9 @@ body {
   background-color: blue;
 }
 .content {
-  width: 70%;
+  width: 80%;
   height: 800px;
   background-color: white;
-  margin-left: 15%;
-  margin-top: 40px;
+  margin-left: 10%;
+  margin-top: 20px;
 }
