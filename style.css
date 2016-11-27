@@ -111,3 +111,12 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+height: 50vw;
+}
+path {
+fill: #d3d3d3;
+transition: 0.6s fill;
+}
+path:hover {
+fill:#74AFAD;
+}
