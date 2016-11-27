@@ -58,8 +58,8 @@ body {
   padding: 20px 20px 20px 20px;
 
 }
-.na:hover {
-  filter: saturate(3);
+.na:hover .text{
+  background-color: red;
 }
 img {
   float: right;
