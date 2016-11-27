@@ -1,56 +1,9 @@
 body {
   background-image: url("background.jpg");
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  }
-li a {
-  display: block;
-  width: 200px;
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color: #F5545C;
-  color: black;
-  font-size: 25px;
-  font-weight: bold;
-  border-style: solid;
-  border-color: black;
-  border-width: thin;
-  padding: 15px;
-  cursor: pointer;
-}
-.item {
-  width: 200px;
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color: #F5545C;
-  color: black;
-  font-size: 15px;
-  font-weight: bold;
-  border-style: solid;
-  border-color: black;
-  border-width: thin;
-  padding: 10px;
-  display: none;
-  position: absolute;
-}
-li a:hover {
-  color: black;
-  background-color: #e94641;
-}
-li a:hover .item{
-  display: block;
-}
-.active {
-  color: black;
-  background-color: #d92b35;
-}
-li {
-  text-align: center;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  
 }
