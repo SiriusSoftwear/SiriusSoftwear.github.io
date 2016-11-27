@@ -48,18 +48,18 @@ body {
   padding-top: 20px;
 
 }
-.image {
-  width: 60%;
-  height: 200px;
-  background-color: red;
-  margin-left: 45px+60%;
-}
 .text {
   width: 30%;
   height: 200px;
   background-color: red;
   margin-left: 15px;
-  float: left;
+}
+.image {
+  width: 60%;
+  height: 200px;
+  background-color: red;
+  margin-left: 45px+30%;
+  float left;
 }
 ul {
   list-style-type: none;
