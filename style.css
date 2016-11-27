@@ -40,11 +40,14 @@ body {
   background-color: #558C89;
 }
 .title {
-  width: 90%;
+  width: 95%;
   height: 100px;
-  margin-left: 5%;
-  font-size: 25px;
+  margin-left: 2.5%;
+  font-size: 50px;
+  font-weight: bold;
   background-color: red;
+  margin-top: 10px;
+
 }
 ul {
   list-style-type: none;
