@@ -46,20 +46,14 @@ body {
   font-weight: bold;
   text-align: center;
   padding-top: 20px;
-
 }
 .text {
-  width: 30%;
-  height: 200px;
+  font-size: 20px;
+  width: 90%;
+  height: 500px;
   background-color: red;
-  margin-left: 15px;
-}
-.image {
-  width: 60%;
-  height: 200px;
-  background-color: red;
-  margin-left: 45px+30%;
-  float left;
+  margin-left: 5%;
+
 }
 ul {
   list-style-type: none;
