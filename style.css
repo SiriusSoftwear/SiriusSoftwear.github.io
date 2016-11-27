@@ -59,7 +59,6 @@ body {
 
 }
 .na:hover {
-  -webkit-filter: saturate(3);
   filter: saturate(3);
 }
 img {
