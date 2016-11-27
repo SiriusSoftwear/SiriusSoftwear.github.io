@@ -18,10 +18,11 @@ body {
 }
 .content {
   width: 80%;
-  height: auto+20px;
+  height: auto;
   background-color: white;
   margin-left: 10%;
   margin-top: 15px;
+  padding-bottom: 20px;
 }
 .footer {
   width: 100%;
