@@ -50,7 +50,7 @@ body {
 .text {
   font-size: 20px;
   width: 90%;
-  height: 500px;
+  height: auto;
   margin-left: 5%;
   border-style: solid;
   border-color: #D9853B;
@@ -115,7 +115,7 @@ svg {
   height: auto;
   width: 50%;
   margin-left: 25%;
-  
+
 }
 path {
 fill: #d3d3d3;
