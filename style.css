@@ -39,6 +39,13 @@ body {
   height: 20%;
   background-color: #558C89;
 }
+.title {
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+  font-size: 25px;
+  background-color: red;
+}
 ul {
   list-style-type: none;
   margin: 0;
