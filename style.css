@@ -111,7 +111,11 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-svg {align-self: center;
+svg {
+  height: auto;
+  width: 50%;
+  margin-left: 25%;
+  
 }
 path {
 fill: #d3d3d3;
