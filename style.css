@@ -125,9 +125,8 @@ li.dropdown {
   background-color: #ECECEA;
   float: left;
 }
-.container {
-  width: 100%;
-  height: auto;
+.clear {
+  clear:both;
 }
 #first_name {
   padding: 5px 5px 5px 5px;
