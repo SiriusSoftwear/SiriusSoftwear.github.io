@@ -125,6 +125,7 @@ li.dropdown {
   margin-left: 7.5%;
   background-color: #ECECEA;
   float: left;
+  margin-bottom: 20px;
 }
 .countField {
   width: 30px;
