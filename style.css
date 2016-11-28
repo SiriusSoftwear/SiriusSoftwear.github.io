@@ -26,6 +26,7 @@ textarea {
   margin-left: 10%;
   margin-top: 15px;
   padding-bottom: 20px;
+  overflow: auto;
 }
 .footer {
   width: 100%;
