@@ -188,6 +188,9 @@ li.dropdown {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+#button2:hover {
+  background-color: 0.6s #D9853B;
+}
 svg {
   height: auto;
   width: 50%;
