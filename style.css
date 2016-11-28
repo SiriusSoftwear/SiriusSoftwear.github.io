@@ -127,7 +127,7 @@ li.dropdown {
   float: left;
 }
 .countField {
-  width: auto;
+  width: 30px;
   height:auto;
   font-weight: bold;
   padding: 5px 5px 5px 5px;
