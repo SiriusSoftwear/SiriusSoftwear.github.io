@@ -6,7 +6,13 @@
   <link href="/style.css" rel="stylesheet">
 </head>
 <body>
-  <script type="text/javascript" src="mapper.js"></script>
+  <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
 <div class="header">
   <div class="header-logo">
   </div>
@@ -36,8 +42,8 @@
   <div class="option">
     option1
     <button>-</button>
-    <textarea rows="1" cols="2" readonly="readonly" contenteditable="false">0</textarea>
-    <button>+</button>
+    <textarea id="clicks" rows="1" cols="2" readonly="readonly" contenteditable="false">0</textarea>
+    <button onclick="OnClick()">+</button>
   </div>
   <div class="option">
     option2
