@@ -134,8 +134,8 @@ li.dropdown {
 }
 .space {
   width: 100%;
-  height: 20px;
-  background-color: red;
+  height: 30px;
+  background-color: white;
   clear:left;
 }
 .counter {
@@ -184,7 +184,6 @@ li.dropdown {
 #button2 {
   clear:left;
   margin-left: 82.5%;
-  margin-top: 30px;
   width: 10%;
   height: auto;
   font-size: 25px;
