@@ -148,12 +148,12 @@ li.dropdown {
 }
 #button1 {
   padding: 5px 5px 5px 5px;
-  margin-right: 10%;
+  margin-left: 65%;
   margin-top: 20px;
   width: 25%;
   height: auto;
   font-size: 25px;
-  border-radius: 20px;
+  border-radius: 5px;
   font-weight: bold;
   background-color: #D9853B;
 }
