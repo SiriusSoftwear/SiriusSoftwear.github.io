@@ -8,10 +8,10 @@
 <body>
   <script type="text/javascript">
     var clicks = 0;
-    function onClick() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
+    function increaseValue(){
+    var fieldElem = document.getElementById("countField");
+    fieldElem.value = parseInt(fieldElem.value, 10) +1;
+}
     </script>
 <div class="header">
   <div class="header-logo">
@@ -42,9 +42,8 @@
   <div class="option">
     option1
     <button>-</button>
-    <textarea rows="1" cols="2" readonly="readonly" contenteditable="false">0</textarea>
-    <p id="clicks"></P>
-    <button onclick="OnClick()">+</button>
+    <input type="text" name="counter" id="countField" value="0"/>
+    <button onclick="increaseValue()">+</button>
   </div>
   <div class="option">
     option2
