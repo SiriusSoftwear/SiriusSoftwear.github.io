@@ -135,6 +135,7 @@ li.dropdown {
 .counter {
   background-color: #D9853B;
   font-weight: bold;
+  border-radius: 5px;
 }
 #first_name {
   padding: 5px 5px 5px 5px;
