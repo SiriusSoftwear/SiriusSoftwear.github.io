@@ -115,6 +115,27 @@ li.dropdown {
   background-color: #ECECEA;
   margin-left: 5%;
 }
+#first_name {
+  padding: 5px 5px 5px 5px;
+  margin-left: 10%;
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
+#last_name {
+  padding: 5px 5px 5px 5px;
+  margin-left: 10%;
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
+#email {
+  padding: 5px 5px 5px 5px;
+  margin-left: 10%;
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
 svg {
   height: auto;
   width: 50%;
