@@ -9,19 +9,27 @@
   <script type="text/javascript">
     function increaseValue(){
       var fieldElem = document.getElementById("countField");
-      fieldElem.value = parseInt(fieldElem.value, 10) +1;
+      if(parseInt(fieldElem.value, 10)<10){
+        fieldElem.value = parseInt(fieldElem.value, 10) +1;
+      }
 }
 function decreaseValue(){
   var fieldElem = document.getElementById("countField");
-  fieldElem.value = parseInt(fieldElem.value, 10) -1;
+  if(parseInt(fieldElem.value, 10)>0){
+    fieldElem.value = parseInt(fieldElem.value, 10) -1;
+  }
 }
 function increaseValue2(){
   var fieldElem = document.getElementById("countField2");
-  fieldElem.value = parseInt(fieldElem.value, 10) +1;
+  if(parseInt(fieldElem.value, 10)<10){
+    fieldElem.value = parseInt(fieldElem.value, 10) +1;
+  }
 }
 function decreaseValue2(){
   var fieldElem = document.getElementById("countField2");
-  fieldElem.value = parseInt(fieldElem.value, 10) -1;
+  if(parseInt(fieldElem.value, 10)>0){
+    fieldElem.value = parseInt(fieldElem.value, 10) -1;
+  }
 }
     </script>
 <div class="header">
