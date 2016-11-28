@@ -175,6 +175,16 @@ li.dropdown {
   font-weight: bold;
   background-color: #D9853B;
 }
+#button1 {
+  margin-left: 84%;
+  margin-top: 20px;
+  width: 10%;
+  height: auto;
+  font-size: 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #D9853B;
+}
 svg {
   height: auto;
   width: 50%;

@@ -31,6 +31,18 @@ function decreaseValue2(){
     fieldElem.value = parseInt(fieldElem.value, 10) -1;
   }
 }
+function increaseValue3(){
+  var fieldElem = document.getElementById("countField3");
+  if(parseInt(fieldElem.value, 10)<10){
+    fieldElem.value = parseInt(fieldElem.value, 10) +1;
+  }
+}
+function decreaseValue3(){
+  var fieldElem = document.getElementById("countField3");
+  if(parseInt(fieldElem.value, 10)>0){
+    fieldElem.value = parseInt(fieldElem.value, 10) -1;
+  }
+}
     </script>
 <div class="header">
   <div class="header-logo">
@@ -71,8 +83,12 @@ function decreaseValue2(){
     <button class="counter" onclick="increaseValue2()">+</button>
   </div>
   <div class="option">
-    option2
+    option3
+    <button class="counter" onCLick="decreaseValue3()">-</button>
+    <input class="countField"type="text" name="counter" id="countField3" value="0"/>
+    <button class="counter" onclick="increaseValue3()">+</button>
   </div>
+  <button id="button2">Weiter</button>
 </div>
 </div>
 <div class="footer">
