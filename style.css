@@ -177,14 +177,13 @@ li.dropdown {
 }
 #button2 {
   margin-left: 82.5%;
-  margin-top: 20px;
   width: 10%;
   height: auto;
   font-size: 25px;
   border-radius: 3px;
   font-weight: bold;
-  background-color: #D9853B;
-  align-content: center;
+  background-color: #558C89;
+  text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
 }
