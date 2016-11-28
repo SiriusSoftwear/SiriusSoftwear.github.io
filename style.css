@@ -126,6 +126,15 @@ li.dropdown {
   background-color: #ECECEA;
   float: left;
 }
+.countField {
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+}
+.counter {
+  background-color: #D9853B;
+  font-weight: bold;
+}
 #first_name {
   padding: 5px 5px 5px 5px;
   margin-left: 10%;
