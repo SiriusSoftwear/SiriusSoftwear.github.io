@@ -121,8 +121,9 @@ li.dropdown {
 .option {
   float: left;
   width: 20%;
-  height: auto;
+  height:200px;
   margin-left: 5%;
+  margin-bottom: 20px;
   background-color: #ECECEA;
 }
 #first_name {
