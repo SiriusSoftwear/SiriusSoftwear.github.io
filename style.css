@@ -109,6 +109,11 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.formula {
+  width: 30%;
+  height: auto;
+  background-color: #ECECEA;
+}
 svg {
   height: auto;
   width: 50%;
