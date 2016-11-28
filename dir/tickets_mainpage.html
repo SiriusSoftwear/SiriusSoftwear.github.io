@@ -12,6 +12,10 @@
     var fieldElem = document.getElementById("countField");
     fieldElem.value = parseInt(fieldElem.value, 10) +1;
 }
+function decreaseValue(){
+var fieldElem = document.getElementById("countField");
+fieldElem.value = parseInt(fieldElem.value, 10) -1;
+}
     </script>
 <div class="header">
   <div class="header-logo">
@@ -41,7 +45,7 @@
   <div>
   <div class="option">
     option1
-    <button>-</button>
+    <button onCLick="decreaseValue()">-</button>
     <input type="text" name="counter" id="countField" value="0"/>
     <button onclick="increaseValue()">+</button>
   </div>
