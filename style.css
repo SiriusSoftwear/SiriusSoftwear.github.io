@@ -121,7 +121,7 @@ li.dropdown {
 .option {
   float: left;
   width: 20%;
-  height: 200px;
+  height: auto;
   margin-left: 5%;
   background-color: #ECECEA;
 }
