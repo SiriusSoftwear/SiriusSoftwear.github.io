@@ -181,9 +181,12 @@ li.dropdown {
   width: 10%;
   height: auto;
   font-size: 25px;
-  border-radius: 5px;
+  border-radius: 3px;
   font-weight: bold;
   background-color: #D9853B;
+  align-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 svg {
   height: auto;
