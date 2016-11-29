@@ -212,7 +212,7 @@ li.dropdown {
   background-color: #D9853B;
 }
 #button2 {
-  float:left;
+  clear: left;
   margin-left: 82.5%;
   width: 10%;
   height: auto;
@@ -229,7 +229,7 @@ li.dropdown {
   -ms-user-select: none; /* IE10+ */
 }
 #button3 {
-  float: left;
+  clear:left;
   margin-left: 7.5%;
   width: 10%;
   height: auto;
