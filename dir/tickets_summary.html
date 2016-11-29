@@ -7,15 +7,15 @@
 </head>
 <body>
   <script type="text/javascript">
-  var qs = new Querystring();
-  var type1 = qs.get("type1");
-  var type2 = qs.get("type2");
-  var type3 = qs.get("type3");
   window.onload = function() {
        //when the document is finished loading, replace everything
        //between the <a ...> </a> tags with the value of splitText
    document.getElementById("myLink").innerHTML="hallo";
 }
+  var qs = Querystring();
+  var type1 = qs.get("type1");
+  var type2 = qs.get("type2");
+  var type3 = qs.get("type3");
     </script>
 <div class="header">
   <div class="header-logo">
