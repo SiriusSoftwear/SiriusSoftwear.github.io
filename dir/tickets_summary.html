@@ -22,7 +22,9 @@ var type1=getParameterByName("type1");
 var type2=getParameterByName("type2");
 var type3=getParameterByName("type3");
   window.onload = function() {
-    document.getElementById("myLink").innerHTML=type1;
+    document.getElementById("type1").innerHTML=type1;
+    document.getElementById("type2").innerHTML=type2;
+    document.getElementById("type3").innerHTML=type3;
 }
     </script>
 <div class="header">
@@ -45,8 +47,13 @@ var type3=getParameterByName("type3");
   </div>
 </div>
 <div class="content">
-  <div class="title"><a id="myLink">fawfwafawf</a>
-  Kaufzusammenfassung
+  <div class="title"> Kaufzusammenfassung
+</div>
+<div class="formula">
+Gesamtkosten<br />
+<a id="type1"></a> x 5€<br />
+<a id="type2"></a> x 7€<br />
+<a id="type3"></a> x 10€<br />
 </div>
 <div id="button3">Zurück</div>
   <div id="button2">Weiter</div>
