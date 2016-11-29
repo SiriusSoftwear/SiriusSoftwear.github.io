@@ -7,11 +7,21 @@
 </head>
 <body>
   <script type="text/javascript">
+  function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var type1=getParameterByName("type1");
+var type2=getParameterByName("type2");
+var type3=getParameterByName("type3");
   window.onload = function() {
-    var qs = Querystring();
-    var type1 ="hallo";
-    var type2 = qs.get("type2");
-    var type3 = qs.get("type3");
     document.getElementById("myLink").innerHTML=type1;
 }
     </script>
