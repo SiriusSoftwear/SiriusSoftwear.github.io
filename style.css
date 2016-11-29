@@ -121,6 +121,10 @@ li.dropdown {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
+  padding: 20px 20px 20px 20px;
+}
+.type{
+  font-size: 25px;
 }
 .option {
   width: 23.33333%;
