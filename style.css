@@ -140,9 +140,14 @@ li.dropdown {
   clear:left;
 }
 .counter {
+  width:10%;
+  height: auto;
   background-color: #D9853B;
   font-weight: bold;
   border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 20px;
+
 }
 #first_name {
   padding: 5px 5px 5px 5px;
