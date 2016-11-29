@@ -245,6 +245,10 @@ li.dropdown {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
 }
+#buttons {
+  width: 100%;
+  height: auto;
+}
 #button2:hover {
   background-color: #D9853B;
   cursor: pointer;
