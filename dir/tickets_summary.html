@@ -7,14 +7,12 @@
 </head>
 <body>
   <script type="text/javascript">
-  var qs = Querystring();
-  var type1 ="hallo";
-  var type2 = qs.get("type2");
-  var type3 = qs.get("type3");
   window.onload = function() {
-       //when the document is finished loading, replace everything
-       //between the <a ...> </a> tags with the value of splitText
-   document.getElementById("myLink").innerHTML=type1;
+    var qs = Querystring();
+    var type1 ="hallo";
+    var type2 = qs.get("type2");
+    var type3 = qs.get("type3");
+    document.getElementById("myLink").innerHTML=type1;
 }
     </script>
 <div class="header">
