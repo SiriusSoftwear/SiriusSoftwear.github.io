@@ -120,7 +120,6 @@ li.dropdown {
   margin-left: 5%;
   font-size: 25px;
   font-weight: bold;
-  text-align: center;
   padding: 20px 20px 20px 20px;
 }
 .option {
@@ -148,7 +147,6 @@ li.dropdown {
   width: 100%;
   height: 30px;
   background-color: white;
-  clear:left;
 }
 .counter {
   width:10%;
@@ -170,6 +168,9 @@ li.dropdown {
 .con {
   width: 100%;
   height: 80%;
+}
+#summary {
+  text-align: right;
 }
 #first_name {
   padding: 5px 5px 5px 5px;

@@ -26,6 +26,9 @@ var type3=getParameterByName("type3");
     document.getElementById("type2").innerHTML=type2;
     document.getElementById("type3").innerHTML=type3;
 }
+function goBack(){
+  window.location.replace("http://siriussoftwear.me/dir/tickets_mainpage.html")
+}
     </script>
 <div class="header">
   <div class="header-logo">
@@ -49,14 +52,14 @@ var type3=getParameterByName("type3");
 <div class="content">
   <div class="title"> Kaufzusammenfassung
 </div>
-<div class="formula">
+<div class="formula" id="summary">
 <h2>Gesamtkosten</h2><br />
 <a class="type"><a id="type1"></a> x 5€</a><br />
 <a class="type"><a id="type2"></a> x 7€</a><br />
 <a class="type"><a id="type3"></a> x 10€</a><br />
 </div>
 <div class="space"></div>
-<div id="button3">Zurück</div>
+<div id="button3" onclick="goBack()">Zurück</div>
   <div id="button2">Weiter</div>
   </div>
 <div class="footer">
