@@ -118,6 +118,9 @@ li.dropdown {
   height: auto;
   background-color: #ECECEA;
   margin-left: 5%;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
 }
 .option {
   width: 23.33333%;
