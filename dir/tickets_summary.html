@@ -7,42 +7,6 @@
 </head>
 <body>
   <script type="text/javascript">
-    function increaseValue(){
-      var fieldElem = document.getElementById("countField");
-      if(parseInt(fieldElem.value, 10)<10){
-        fieldElem.value = parseInt(fieldElem.value, 10) +1;
-      }
-}
-function decreaseValue(){
-  var fieldElem = document.getElementById("countField");
-  if(parseInt(fieldElem.value, 10)>0){
-    fieldElem.value = parseInt(fieldElem.value, 10) -1;
-  }
-}
-function increaseValue2(){
-  var fieldElem = document.getElementById("countField2");
-  if(parseInt(fieldElem.value, 10)<10){
-    fieldElem.value = parseInt(fieldElem.value, 10) +1;
-  }
-}
-function decreaseValue2(){
-  var fieldElem = document.getElementById("countField2");
-  if(parseInt(fieldElem.value, 10)>0){
-    fieldElem.value = parseInt(fieldElem.value, 10) -1;
-  }
-}
-function increaseValue3(){
-  var fieldElem = document.getElementById("countField3");
-  if(parseInt(fieldElem.value, 10)<10){
-    fieldElem.value = parseInt(fieldElem.value, 10) +1;
-  }
-}
-function decreaseValue3(){
-  var fieldElem = document.getElementById("countField3");
-  if(parseInt(fieldElem.value, 10)>0){
-    fieldElem.value = parseInt(fieldElem.value, 10) -1;
-  }
-}
     </script>
 <div class="header">
   <div class="header-logo">
@@ -68,26 +32,7 @@ function decreaseValue3(){
 <div class="content">
   <div class="title">
   Ticketverkauf
-  </div>
-  <div class="option">
-    <div class="con"></div>
-    <div class="counter" onCLick="decreaseValue()">-</div>
-    <input class="countField"type="text" name="counter" id="countField" value="0"/>
-    <div class="counter" onclick="increaseValue()">+</div>
-  </div>
-  <div class="option">
-    <div class="con"></div>
-    <div class="counter" onCLick="decreaseValue2()">-</div>
-    <input class="countField"type="text" name="counter" id="countField2" value="0"/>
-    <div class="counter" onclick="increaseValue2()">+</div>
-  </div>
-  <div class="option">
-    <div class="con"></div>
-    <div class="counter" onCLick="decreaseValue3()">-</div>
-    <input class="countField"type="text" name="counter" id="countField3" value="0"/>
-    <div class="counter" onclick="increaseValue3()">+</div>
-  </div>
-  <div class="space"></div>
+</div>
   <div id="button2">Weiter</div>
 <div class="footer">
   <div class="footer1">
