@@ -21,10 +21,12 @@
 var type1=getParameterByName("type1");
 var type2=getParameterByName("type2");
 var type3=getParameterByName("type3");
+var all=parseInt(type1, 10)*5+parseInt(type2, 10)*7+parseInt(type3, 10)*10;
   window.onload = function() {
     document.getElementById("type1").innerHTML=type1;
     document.getElementById("type2").innerHTML=type2;
     document.getElementById("type3").innerHTML=type3;
+    document.getElementById("all").innerHTML=all;
 }
 function goBack(){
   window.location.replace("http://siriussoftwear.me/dir/tickets_mainpage.html")
@@ -57,6 +59,8 @@ function goBack(){
 <a class="type"><a id="type1"></a> x 5€</a><br />
 <a class="type"><a id="type2"></a> x 7€</a><br />
 <a class="type"><a id="type3"></a> x 10€</a><br />
+ <hr width="40%"><br />
+ <a id="all"></a>€
 </div>
 <div id="buttons">
 <div id="button3" class="button" onclick="goBack()">Zurück</div>
