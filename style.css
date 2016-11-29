@@ -160,6 +160,7 @@ li.dropdown {
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
+  cursor: pointer;
 
 }
 .con {
@@ -207,6 +208,23 @@ li.dropdown {
 #button2 {
   clear:left;
   margin-left: 82.5%;
+  width: 10%;
+  height: auto;
+  font-size: 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #558C89;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: background-color 0.5s ease;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+#button3 {
+  clear:left;
+  margin-left: 7.5%;
   width: 10%;
   height: auto;
   font-size: 25px;
