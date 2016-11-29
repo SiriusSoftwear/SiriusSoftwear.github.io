@@ -146,9 +146,13 @@ li.dropdown {
   font-weight: bold;
   border-radius: 5px;
   padding: 5px 5px 5px 5px;
-  margin-bottom: 20px;
+  float: left;
   text-align: center;
 
+}
+.con {
+  width: 100%;
+  height: 80%;
 }
 #first_name {
   padding: 5px 5px 5px 5px;
@@ -204,6 +208,15 @@ li.dropdown {
 }
 #button2:hover {
   background-color: #D9853B;
+}
+#countField {
+  float: left;
+}
+#countField2 {
+  float: left;
+}
+#countField3{
+  float: left;
 }
 svg {
   height: auto;
