@@ -223,6 +223,7 @@ li.dropdown {
 }
 #button2:hover {
   background-color: #D9853B;
+  cursor: pointer;
 }
 #countField {
   float: left;
