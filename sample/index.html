@@ -4,43 +4,40 @@
   <meta charset="utf-8">
   <title> ABIPARTY GGB</title>
   <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo|Libre+Baskerville" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="html5slider.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
-  <script type="text/javascript">
-  window.onload = function() {
-      currentSlide(1);
-  }
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
+  <script type="text/javascript" src="main_script.js"></script>
+  <script type="text/javascript" src="audio_player.js"></script>
 <div class="header">
+  <ul class="menu">
+    <a href="#event"><li>EVENT</li></a>
+    <a href="#location"><li>LOCATION</li></a>
+    <a href="#other_stuff"><li>OTHER STUFF</li></a>
+  </ul>
+  <div style="color:#3B3738;float:left;height:39px;width:auto;border-left:6px solid #3B3738;border-right:6px solid #3B3738;font-size:23px;font-weight:bold;padding-left:20px;padding-right:20px;padding-top:18.5px;">Jetzt schnell noch Tickets sichern</div>
+  <div style="float:right;height:100%;width:auto;" class="audio_container">
+    <div class="audio_button" onclick="nextTitle()"id="change_title"><i class="material-icons" style="font-size:25px;color:#3B3738;">fast_forward</i></div>
+    <div class="audio_button" onclick="startAudio()" id="play"><i class="material-icons" style="font-size:37px;color:#3B3738;">play_arrow</i></div>
+    <div class="audio_button" onclick="prevTitle()"id="change_title"><i class="material-icons" style="font-size:25px;color:#3B3738;">fast_rewind</i></div>
+    <div>
+    <div id="audio_title"style="float:right;font-size:17px;margin-right:10px;margin-top:6.5px;color:#3B3738;">dies ist ein kuhler titel</div>
+    <div class="hp_slide">
+      <div class="hp_range"></div>
+    </div>
+  </div>
+  </div>
 </div>
 <div class="content">
   <h1 id="title"> Die krasseste Party des Jahres</h1>
+  <div id="important_data">
+    ABIPARTY GGB 2017<br/>
+    TICKETS ON SALE<br />
+    FEBRUAR 2017
+</div>
   <div class="slideshow-container">
     <div class="mySlides fade">
       <img src="pic1.png" style="width:100%">
@@ -66,9 +63,21 @@
   <span class="dot" onclick="currentSlide(4)"></span>
 </div>
 <div class="separator"></div>
-<div class="text">random text<br /><br /></div>
-<div class="text">random text<br /><br /></div>
-<div class="text">random text<br /><br /></div>
+<h1 id="event" style="padding-top:60px;margin-top:-60px;">Das Event</h1>
+<p style="font-size:40px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+<div class="separator"></div>
+<h1 id="location" style="padding-top:60px;margin-top:-60px;">Die Location</h1>
+<p style="font-size:40px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+<div class="separator"></div>
+<h1 id="other_stuff" style="padding-top:60px;margin-top:-60px;">Other Stuff</h1>
+<p style="font-size:40px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+<div class="separator"></div>
   </div>
   </div>
 <div class="footer">
