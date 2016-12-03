@@ -2,6 +2,7 @@ body {
   background-color: #FDF3E7;
   margin:0px;
   font-family: 'Boogaloo';
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -53,6 +54,54 @@ a {
   float: right;
   transition: background-color 0.5s ease;
 }
+.ticket_button {
+  width:40px;
+  height:40px;
+  float:left;
+  margin-left:20px;
+  border-radius:5px;
+  background-color: #C63D0F;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 25px;
+  padding-top: 2.5px;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+.ticket_button:hover{
+  cursor: pointer;
+}
+.countField {
+  width: 40px;
+  height: 40px;
+  float:left;
+  margin-left: 20px;
+  background-color: #7E8F7C;
+  color:#3B3738;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  pointer-events: none;
+  font-family: 'Boogaloo';
+  font-size: 25px;
+  border: none;
+}
+input[type=text] {
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  font-family: 'Boogaloo';
+  margin-top: 10px;
+  border-radius: 10px;
+  color:#3B3738;
+}
+input[type=text]:focus {
+  border-color: #3B3738;
+  border-style: solid;
+}
 #pause {
   height: 40px;
   width: 40px;
@@ -85,9 +134,9 @@ a {
   border-right:3px solid #3B3738;
 }
 .hp_range {
-  margin-top: 11px;
+  margin-top: 11.5px;
   width: 0px;
-  height: 3px;
+  height: 2px;
   background: #3B3738;
 }
 .content {

@@ -1,5 +1,5 @@
-var playlist = [new Audio("audio/Lean On.m4a"),new Audio("audio/pursuit.m4a"), new Audio("audio/Never forget you.m4a")];
-var title_array= ["Major Lazer & DJ Snake - Lean On", "Kid Cudi - Pursuit Of Happiness ft. MGMT ","Zara Larsson, MNEK - Never Forget You"];
+var playlist = [new Audio("audio/Lean On.m4a"),new Audio("audio/pursuit.m4a"), new Audio("audio/Never forget you.m4a"),new Audio("audio/Mattafix - Big City Life (LEEX Remix).m4a"),new Audio("audio/The Fray - How To Save A Life (Jiggers Remix).m4a"),new Audio("audio/Alphaville - Forever Young (DIMMI Remix).m4a")];
+var title_array= ["Major Lazer & DJ Snake - Lean On", "Kid Cudi - Pursuit Of Happiness ft. MGMT ","Zara Larsson, MNEK - Never Forget You","Mattafix - Big City Life (LEEX Remix)","The Fray - How To Save A Life (Jiggers Remix)","Alphaville - Forever Young (DIMMI Remix)"];
 var titleIndex=0;
 function startAudio(){
   document.getElementById("audio_title").innerHTML=title_array[titleIndex];
@@ -12,11 +12,19 @@ function startAudio(){
     }
 });
   playlist[titleIndex].play();
-  $('#play').replaceWith('<div class="audio_button" onclick="pauseAudio()" id="pause"><i class="material-icons" style="font-size:38px;color:#3B3738;">pause</i></div>')
+  $('#play').fadeOut(500,function(){
+    $('#play').replaceWith('<div class="audio_button" onclick="pauseAudio()" id="pause"><i class="material-icons" style="font-size:38px;color:#3B3738;">pause</i></div>');
+    $('#pause').fadeIn(500);
+
+  });
+  /**$('#play').replaceWith('<div class="audio_button" onclick="pauseAudio()" id="pause"><i class="material-icons" style="font-size:38px;color:#3B3738;">pause</i></div>')**/
 }
 function pauseAudio(){
   playlist[titleIndex].pause();
-  $('#pause').replaceWith('<div class="audio_button" onclick="startAudio()" id="play"><i class="material-icons" style="font-size:38px;color:#3B3738;">play_arrow</i></div>')
+  $('#pause').fadeOut(500,function(){
+    $('#pause').replaceWith('<div class="audio_button" onclick="startAudio()" id="play"><i class="material-icons" style="font-size:38px;color:#3B3738;">play_arrow</i></div>');
+    $('#play').fadeIn(500);
+  });
 }
 function nextTitle(){
   playlist[titleIndex].pause();
