@@ -58,23 +58,13 @@ function LoadBill(){
           var client = this.props.client;
 
           return paypal.rest.payment.create(env, client, {
-            noshipping: "1",
               transactions: [
                   {
                       amount:
                       {
                         total: overall,
                         currency: 'EUR',
-                        details: {
-                          subtotal: overall,
-                          tax: "0.00",
-                          shipping: "0.00",
-                          handling_fee: "0.00",
-                          shipping_discount: "0.00",
-                          insurance: "0.00"
-                        }
-                      },
-                      description: "BEschreibung"
+                      }
 
                   }
               ]
