@@ -59,6 +59,9 @@ function LoadBill(){
 
           return paypal.rest.payment.create(env, client, {
 			  intent: "order",
+        payer: {
+          payment_method: "paypal"
+        },
               transactions: [
                   {
                     amount:
@@ -74,7 +77,8 @@ function LoadBill(){
                         insurance: "0.00"
                       }
                     },
-                    description: "BEschreibung"
+                    description: "BEschreibung",
+                    note_to_payee:"Bezahlen"
                 }
               ]
           });
