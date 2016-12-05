@@ -60,6 +60,7 @@ function LoadBill(){
           return paypal.rest.payment.create(env, client, {
               transactions: [
                   {
+<<<<<<< HEAD
                     amount:
                     {
                       total: overall,
@@ -75,6 +76,22 @@ function LoadBill(){
                     },
                     description: "BEschreibung"
 
+=======
+                      amount:
+                      {
+                        total: overall,
+                        currency: 'EUR',
+                        "details": {
+          "subtotal": "30.00",
+          "tax": "0.07",
+          "shipping": "0.03",
+          "handling_fee": "1.00",
+          "insurance": "0.01",
+          "shipping_discount": "-1.00"
+        }
+                      
+                     }
+>>>>>>> origin/master
 
                 }
               ]
