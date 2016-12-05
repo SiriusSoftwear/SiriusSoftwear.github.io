@@ -64,7 +64,16 @@ function LoadBill(){
                       {
                         total: overall,
                         currency: 'EUR',
-                      }
+                        "details": {
+          "subtotal": "30.00",
+          "tax": "0.07",
+          "shipping": "0.03",
+          "handling_fee": "1.00",
+          "insurance": "0.01",
+          "shipping_discount": "-1.00"
+        }
+                      
+                     }
 
                 }
               ]
