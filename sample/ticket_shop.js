@@ -58,7 +58,7 @@ function LoadBill(){
           var client = this.props.client;
 
           return paypal.rest.payment.create(env, client, {
-			  intent: "order",
+			  intent: "authorize",
               transactions: [
                   {
                     amount:
