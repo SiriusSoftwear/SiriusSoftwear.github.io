@@ -58,14 +58,10 @@ function LoadBill(){
           var client = this.props.client;
 
           return paypal.rest.payment.create(env, client, {
-<<<<<<< HEAD
-			  intent: "order",
+			  intent: "authorize",
         payer: {
           payment_method: "paypal"
         },
-=======
-			  intent: "authorize",
->>>>>>> origin/master
               transactions: [
                   {
                     amount:
@@ -75,9 +71,7 @@ function LoadBill(){
                       details: {
                         subtotal: overall,
                         tax: "0.00",
-                        shipping: "0.00",
                         handling_fee: "0.00",
-                        shipping_discount: "0.00",
                         insurance: "0.00"
                       }
                     },
