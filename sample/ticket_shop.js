@@ -64,41 +64,9 @@ function LoadBill(){
                       {
                         total: overall,
                         currency: 'EUR',
-                      },
-                      "item_list": {
-        "items": [
-          {
-            "name": "hat",
-            "sku": "1",
-            "price": "3.00",
-            "currency": "USD",
-            "quantity": "5",
-            "description": "Brown color hat",
-            "tax": "0.01"
-          },
-          {
-            "name": "handbag",
-            "sku": "product34",
-            "price": "15.00",
-            "currency": "USD",
-            "quantity": "1",
-            "description": "Black color handbag",
-            "tax": "0.02"
-          }
-        ],
-        "shipping_address": {
-          "recipient_name": "HelloWorld",
-          "line1": "4thFloor",
-          "line2": "unit#34",
-          "city": "SAn Jose",
-          "state": "CA",
-          "phone": "011862212345678",
-          "postal_code": "95131",
-          "country_code": "US"
-        }
-      }
+                      }
 
-                  }
+                }
               ]
           });
       },
