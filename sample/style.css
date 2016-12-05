@@ -89,7 +89,7 @@ a {
   font-size: 25px;
   border: none;
 }
-input[type=text] {
+.textfield {
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
   font-size: 30px;
