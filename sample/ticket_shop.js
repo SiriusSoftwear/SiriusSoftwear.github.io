@@ -42,58 +42,77 @@ function LoadBill(){
   $("#formula").fadeIn(1000);
   /*$('#go_back').replaceWith('<div class="ticket_button" onclick="LoadTicketOverview()" style="float:left;width:10%;height:50px;background-color:#C63D0F;margin-top:20px;margin-left:0px;text-align:center;font-size:40px;box-sizing:border-box;color:#3B3738;border-radius:5px;">Zurück</div>');*/
   //$('#go_forward').replaceWith('<div id="paypal-button" class="ticket_button"style="float:right;width:10%;height:50px;background-color:#C63D0F;margin-top:20px;text-align:center;font-size:40px;box-sizing:border-box;color:#3B3738;border-radius:5px;" onclick="SendPOSTRequest()">Weiter</div>');
-  $('#go_forward').replaceWith('<div id="paypal-button" NOSHIPPING=1 style="width:30%;margin-top:20px;margin-left:70%;box-sizing:border-box;"></div>');
+  $('#go_forward').replaceWith('<div id="paypal-button"></div>');
   paypal.Button.render({
 
-      env: 'sandbox', // Optional: specify 'sandbox' environment
+        env: 'sandbox', // Optional: specify 'sandbox' environment
 
+        client: {
+            sandbox:    'ASYUBLFT5ziCVG0cGaGSw2n2_4ZjwMymqHVf0JkLiop_aYvGRF1bgdJt6YGsI4DOn_qXT5sBC-q59jAI',
+            production: 'xxxxxxxxx'
+        },
 
-      client: {
-          sandbox:    'ASYUBLFT5ziCVG0cGaGSw2n2_4ZjwMymqHVf0JkLiop_aYvGRF1bgdJt6YGsI4DOn_qXT5sBC-q59jAI'
-      },
+        payment: function() {
 
-      payment: function() {
+            var env    = this.props.env;
+            var client = this.props.client;
 
-          var env    = this.props.env;
-          var client = this.props.client;
-
-          return paypal.rest.payment.create(env, client, {
-			  intent: "order",
-              transactions: [
-                  {
-                    amount:
+            return paypal.rest.payment.create(env, client, {
+                transactions: [
                     {
-                      total: overall,
-                      currency: 'EUR',
-                      details: {
-                        subtotal: overall,
-                        tax: "0.00",
-                        handling_fee: "0.00",
-                        insurance: "0.00"
-                      }
-                    },
-                    description: "BEschreibung",
-                    note_to_payee:"Bezahlen"
-                }
-              ]
-          });
-      },
-
-      commit: true, // Optional: show a 'Pay Now' button in the checkout flow
-
-      onAuthorize: function(data, actions) {
-
-          return actions.payment.execute().then(function() {
-              // Show a success page to the buyer
-              $('#paypal-button').replaceWith('');
-              $('#holder').replaceWith('<div id="holder" style="overflow:auto;height:auto;width:100%;"><div id="checkout"style="margin-left:70%;background-color:#7E8F7C;color:#3B3738;width:30%;height:auto;font-size:40px;text-align:left;padding-left:20px;padding-top:20px;padding-bottom:20px;">Danke für deine Bestellung!</div></div>')
-              $('#checkout').animate({
-                'marginLeft' : "-=70%"
-              },'slow');
-          });
+                      "amount": {
+      "total": overall,
+      "currency": "EUR",
+      "details": {
+        "subtotal": overall,
+        "tax": "0.00",
+        "shipping": "0.00",
+        "handling_fee": "0.00",
+        "shipping_discount": "0.00",
+        "insurance": "0.00"
       }
+    },
+    "description": "This is the payment transaction description.",
+    "item_list": {
+      "items": [
+        {
+          "name": "Ticket",
+          "description": "Normales Ticket, Eintritt sowie gratis Shots am Eingang. Bietet alles, was man braucht.",
+          "quantity": amount_ticket1,
+          "price": "7",
+          "tax": "0.00",
+          "sku": "ticket",
+          "currency": "EUR"
+        },
+        {
+          "name": "VIP Ticket",
+          "description": "Bietet schnelleren Eintritt sowie gratis Shots am Eingang",
+          "quantity": amount_ticket2,
+          "price": "10",
+          "tax": "0.00",
+          "sku": "vip_ticket",
+          "currency": "EUR"
+        }
+      ]
+    }
+  }
+                ]
+            });
+        },
 
-  }, '#paypal-button');
+        commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+
+        onAuthorize: function(data, actions) {
+          alert(data.payment);
+
+            // Optional: display a confirmation page here
+
+            return actions.payment.execute().then(function() {
+                // Show a success page to the buyer
+            });
+        }
+
+    }, '#paypal-button');
 }
 function SendPOSTRequest(){
   var vorname =  document.getElementById("vorname").value;
