@@ -48,7 +48,7 @@ function LoadBill(){
         env: 'sandbox', // Optional: specify 'sandbox' environment
 
         client: {
-            sandbox:    'ASYUBLFT5ziCVG0cGaGSw2n2_4ZjwMymqHVf0JkLiop_aYvGRF1bgdJt6YGsI4DOn_qXT5sBC-q59jAI',
+            sandbox:    'ASG4AMze_xYQv5yunNPTPk-B9hUNUUvFjej2nMqzv_euMjSBrEnWmSj7YuLdFqieVqKGz206OgMZ8Yve',
             production: 'xxxxxxxxx'
         },
 
@@ -61,43 +61,38 @@ function LoadBill(){
                 transactions: [
                     {
                       "amount": {
-        "total": "30.11",
-        "currency": "USD",
+        "total": overall+2,
+        "currency": "EUR",
         "details": {
-          "subtotal": "30.00",
-          "tax": "0.07",
-          "shipping": "0.03",
-          "handling_fee": "1.00",
-          "shipping_discount": "-1.00",
-          "insurance": "0.01"
+          "subtotal": overall,
+          "tax": "0.00",
+          "shipping": "0.00",
+          "handling_fee": "2.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
         }
       },
       "description": "This is the payment transaction description.",
-      "custom": "EBAY_EMS_90048630024435",
-      "invoice_number": "48787589673",
       "payment_options": {
-        "allowed_payment_method": "INSTANT_FUNDING_SOURCE"
+        "allowed_payment_method": "IMMEDIATE_PAY"
       },
-      "soft_descriptor": "ECHI5786786",
       "item_list": {
         "items": [
           {
-            "name": "hat",
-            "description": "Brown color hat",
-            "quantity": "5",
-            "price": "3",
-            "tax": "0.01",
+            "name": "ticket",
+            "description": "Normales Ticket",
+            "quantity": amount_ticket1,
+            "price": "7",
             "sku": "1",
-            "currency": "USD"
+            "currency": "EUR"
           },
           {
-            "name": "handbag",
-            "description": "Black color hand bag",
-            "quantity": "1",
-            "price": "15",
-            "tax": "0.02",
-            "sku": "product34",
-            "currency": "USD"
+            "name": "vip_ticket",
+            "description": "VIP-TICKET",
+            "quantity": amount_ticket2,
+            "price": "10",
+            "sku": "2",
+            "currency": "EUR"
           }
         ],
         "shipping_address": {
@@ -105,10 +100,10 @@ function LoadBill(){
           "line1": "4thFloor",
           "line2": "unit#34",
           "city": "SAn Jose",
-          "country_code": "US",
+          "country_code": "DE",
           "postal_code": "95131",
           "phone": "011862212345678",
-          "state": "CA"
+          "state": "DE"
         }
       }
   }
