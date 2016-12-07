@@ -45,80 +45,85 @@ function LoadBill(){
   $('#go_forward').replaceWith('<div id="paypal-button"></div>');
   paypal.Button.render({
 
-       env: 'sandbox', // Optional: specify 'sandbox' environment
-       client: {
-           sandbox:    'ASYUBLFT5ziCVG0cGaGSw2n2_4ZjwMymqHVf0JkLiop_aYvGRF1bgdJt6YGsI4DOn_qXT5sBC-q59jAI',
-           production: 'xxxxxxxxx'
-       },
+        env: 'sandbox', // Optional: specify 'sandbox' environment
 
-       payment: function() {
+        client: {
+            sandbox:    'ASG4AMze_xYQv5yunNPTPk-B9hUNUUvFjej2nMqzv_euMjSBrEnWmSj7YuLdFqieVqKGz206OgMZ8Yve',
+            production: 'xxxxxxxxx'
+        },
 
-           var env    = this.props.env;
-           var client = this.props.client;
+        payment: function() {
 
-           return paypal.rest.payment.create(env, client, {
-               transactions: [
-                   {
-                       amount: {
-                         total: overall,
-                         currency: 'EUR',
-                         details: {
-                           subtotal: overall,
-                           tax: '0.00',
-                           shipping:'0.00',
-                           handling_fee:'0.00',
-                           shipping_discount:'0.00',
-                           insurance:'0.00'
-                         }
-                       },
-                       item_list: {
-                         items: [
-                           {
-                             name: 'ticket',
-                             description:'normales ticket',
-                             quantity: amount_ticket1,
-                             price: '7',
-                             tax: '0',
-                             sku:'1',
-                             currency:'EUR'
-                           },
-                           {
-                             name: 'vipticket',
-                             description:'vip-ticket',
-                             quantity: amount_ticket2,
-                             price: '7',
-                             tax: '0',
-                             sku:'2',
-                             currency:'EUR'
-                           }
-                         ], shipping_address: {
-                           recipient_name:'Hello World',
-                           line1:'straße',
-                           line2:'49',
-                           city:'Bramsche',
-                           country_code:'DE',
-                           postal_code:'49565',
-                           phone:'1234',
-                           state:'DE'
-                         }
-                       }
-                   }
-               ]
-           });
-       },
+            var env    = this.props.env;
+            var client = this.props.client;
 
-       commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+            return paypal.rest.payment.create(env, client, {
+                transactions: [
+                    {
+                      amount: {
+                          currency: "EUR",
+        total: overall+2,
+        "details": {
+          "subtotal": overall,
+          "tax": "0.00",
+          "shipping": "0.00",
+          "handling_fee": "2.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "description": "This is the payment transaction description.",
+      "payment_options": {
+        "allowed_payment_method": "IMMEDIATE_PAY"
+      },
+      "item_list": {
+        "items": [
+          {
+            "name": "ticket",
+            "description": "Normales Ticket",
+            "quantity": amount_ticket1,
+            "price": "7",
+            "sku": "1",
+            "currency": "EUR"
+          },
+          {
+            "name": "vip_ticket",
+            "description": "VIP-TICKET",
+            "quantity": amount_ticket2,
+            "price": "10",
+            "sku": "2",
+            "currency": "EUR"
+          }
+        ],
+        "shipping_address": {
+          "recipient_name": "Hello World",
+          "line1": "4thFloor",
+          "line2": "unit#34",
+          "city": "SAn Jose",
+          "country_code": "DE",
+          "postal_code": "95131",
+          "phone": "011862212345678",
+          "state": "DE"
+        }
+      }
+  }
+                ]
+            });
+        },
 
-       onAuthorize: function(data, actions) {
+        commit: true, // Optional: show a 'Pay Now' button in the checkout flow
 
-           // Optional: display a confirmation page here
+        onAuthorize: function(data, actions) {
+          alert(data.payment);
 
-           return actions.payment.execute().then(function() {
-               // Show a success page to the buyer
-           });
-       }
+            // Optional: display a confirmation page here
 
-   }, '#paypal-button');
+            return actions.payment.execute().then(function() {
+                // Show a success page to the buyer
+            });
+        }
+
+    }, '#paypal-button');
 }
 function SendPOSTRequest(){
   var vorname =  document.getElementById("vorname").value;

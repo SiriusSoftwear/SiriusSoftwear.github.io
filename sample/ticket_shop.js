@@ -45,37 +45,39 @@ function LoadBill(){
   $('#go_forward').replaceWith('<div id="paypal-button"></div>');
   paypal.Button.render({
 
-        env: 'sandbox', // Optional: specify 'sandbox' environment
+       env: 'sandbox', // Optional: specify 'sandbox' environment
+       client: {
+           sandbox:    'ASG4AMze_xYQv5yunNPTPk-B9hUNUUvFjej2nMqzv_euMjSBrEnWmSj7YuLdFqieVqKGz206OgMZ8Yve',
+           production: 'xxxxxxxxx'
+       },
 
-        client: {
-            sandbox:    'ASG4AMze_xYQv5yunNPTPk-B9hUNUUvFjej2nMqzv_euMjSBrEnWmSj7YuLdFqieVqKGz206OgMZ8Yve',
-            production: 'xxxxxxxxx'
-        },
+       payment: function() {
 
-        payment: function() {
+           var env    = this.props.env;
+           var client = this.props.client;
 
-            var env    = this.props.env;
-            var client = this.props.client;
-
-            return paypal.rest.payment.create(env, client, {
-                transactions: [
-                    {
-                      "amount": {
-        "total": overall+2,
+           return paypal.rest.payment.create(env, client, {
+               transactions: [
+                   {
+                     "amount": {
+        "total": overall,
         "currency": "EUR",
         "details": {
           "subtotal": overall,
           "tax": "0.00",
           "shipping": "0.00",
-          "handling_fee": "2.00",
+          "handling_fee": "0.00",
           "shipping_discount": "0.00",
           "insurance": "0.00"
         }
       },
       "description": "This is the payment transaction description.",
+      "custom": "GGB_ABIPARTY_TICKET",
+      "invoice_number": "",
       "payment_options": {
-        "allowed_payment_method": "IMMEDIATE_PAY"
+        "allowed_payment_method": "INSTANT_FUNDING_SOURCE"
       },
+      "soft_descriptor": "ECHI5786786",
       "item_list": {
         "items": [
           {
@@ -83,6 +85,7 @@ function LoadBill(){
             "description": "Normales Ticket",
             "quantity": amount_ticket1,
             "price": "7",
+            "tax": "0.00",
             "sku": "1",
             "currency": "EUR"
           },
@@ -91,7 +94,8 @@ function LoadBill(){
             "description": "VIP-TICKET",
             "quantity": amount_ticket2,
             "price": "10",
-            "sku": "2",
+            "tax": "0.00",
+            "sku": "product34",
             "currency": "EUR"
           }
         ],
@@ -100,30 +104,29 @@ function LoadBill(){
           "line1": "4thFloor",
           "line2": "unit#34",
           "city": "SAn Jose",
-          "country_code": "DE",
+          "country_code": "US",
           "postal_code": "95131",
           "phone": "011862212345678",
-          "state": "DE"
+          "state": "CA"
         }
       }
-  }
-                ]
-            });
-        },
+                       }
+               ]
+           });
+       },
 
-        commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+       commit: true, // Optional: show a 'Pay Now' button in the checkout flow
 
-        onAuthorize: function(data, actions) {
-          alert(data.payment);
+       onAuthorize: function(data, actions) {
 
-            // Optional: display a confirmation page here
+           // Optional: display a confirmation page here
 
-            return actions.payment.execute().then(function() {
-                // Show a success page to the buyer
-            });
-        }
+           return actions.payment.execute().then(function() {
+               // Show a success page to the buyer
+           });
+       }
 
-    }, '#paypal-button');
+   }, '#paypal-button');
 }
 function SendPOSTRequest(){
   var vorname =  document.getElementById("vorname").value;
