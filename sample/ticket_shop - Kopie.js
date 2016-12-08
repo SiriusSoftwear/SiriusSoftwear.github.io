@@ -78,6 +78,16 @@ function LoadBill(){
    "currency": "EUR"
  }
 ],
+"shipping_address": {
+ "recipient_name": "Hello World",
+ "line1": "4thFloor",
+ "line2": "unit#34",
+ "city": "SAn Jose",
+ "country_code": "US",
+ "postal_code": "95131",
+ "phone": "011862212345678",
+ "state": "CA"
+}
 }
               }
       ]
@@ -119,6 +129,16 @@ function LoadBill(){
      "currency": "EUR"
    }
  ],
+ "shipping_address": {
+   "recipient_name": "Hello World",
+   "line1": "4thFloor",
+   "line2": "unit#34",
+   "city": "SAn Jose",
+   "country_code": "US",
+   "postal_code": "95131",
+   "phone": "011862212345678",
+   "state": "CA"
+ }
 }
                 }
         ]
@@ -160,6 +180,16 @@ function LoadBill(){
      "currency": "EUR"
    }
  ],
+ "shipping_address": {
+   "recipient_name": "Hello World",
+   "line1": "4thFloor",
+   "line2": "unit#34",
+   "city": "SAn Jose",
+   "country_code": "US",
+   "postal_code": "95131",
+   "phone": "011862212345678",
+   "state": "CA"
+ }
 }
                 }
         ]
@@ -170,7 +200,7 @@ function LoadBill(){
   $('#summary').animate({
     'marginLeft' : "-=60%"
   },'slow');
-  $("#holder").append('<div id="formula"style="float:right;background-color:#7E8F7C;color:#3B3738;width:30%;height:auto;display:none;font-size:40px;text-align:left;padding-left:20px;padding-top:20px;padding-bottom:20px;">Kontaktdaten<br/><input class="textfield" type="text" name="Vorname" id="vorname" maxlength="30" placeholder="Vorname" oninput="FadeInPayPalButton()"><br/><input class="textfield" type="text" name="Nachname" id="nachname" maxlength="30" placeholder="Nachname" oninput="FadeInPayPalButton()"><br/><input class="textfield" type="text" name="Geburtsdatum" id="geburtsdatum" maxlength="8" placeholder="Geburtstag(TT.MM.JJ)" oninput="FadeInPayPalButton()"><br/><input class="textfield" type="text" name="Email" id="email" maxlength="30" placeholder="Email" oninput="FadeInPayPalButton()"></div>');
+  $("#holder").append('<div id="formula"style="float:right;background-color:#7E8F7C;color:#3B3738;width:30%;height:auto;display:none;font-size:40px;text-align:left;padding-left:20px;padding-top:20px;padding-bottom:20px;">Kontaktdaten<br/><input class="textfield" type="text" name="Vorname" id="vorname" maxlength="30" placeholder="Vorname" oninput="FadeInPayPaylButton()"><br/><input class="textfield" type="text" name="Nachname" id="nachname" maxlength="30" placeholder="Nachname" oninput="FadeInPayPaylButton()"><br/><input class="textfield" type="text" name="Geburtsdatum" id="geburtsdatum" maxlength="8" placeholder="Geburtstag(TT.MM.JJ)" oninput="FadeInPayPaylButton()"><br/><input class="textfield" type="text" name="Email" id="email" maxlength="30" placeholder="Email" oninput="FadeInPayPaylButton()"></div>');
   $("#formula").fadeIn(1000);
   /*$('#go_back').replaceWith('<div class="ticket_button" onclick="LoadTicketOverview()" style="float:left;width:10%;height:50px;background-color:#C63D0F;margin-top:20px;margin-left:0px;text-align:center;font-size:40px;box-sizing:border-box;color:#3B3738;border-radius:5px;">Zurück</div>');*/
   //$('#go_forward').replaceWith('<div id="paypal-button" class="ticket_button"style="float:right;width:10%;height:50px;background-color:#C63D0F;margin-top:20px;text-align:center;font-size:40px;box-sizing:border-box;color:#3B3738;border-radius:5px;" onclick="SendPOSTRequest()">Weiter</div>');
@@ -215,14 +245,12 @@ function SendPOSTRequest(){
   var email =  document.getElementById("email").value;
   $.post( "http://localhost/scrims.NET/input.php", { first_name: vorname, last_name: nachname, birthday: geburtsdatum,email: email,payment_done: "false", ticket1: amount_ticket1, ticket2: amount_ticket2, all: overall} );
 }
-function FadeInPayPalButton(){
+function FadeInPayPaylButton(){
   var vorname =  document.getElementById("vorname").value;
   var nachname =  document.getElementById("nachname").value;
   var geburtsdatum =  document.getElementById("geburtsdatum").value;
   var email =  document.getElementById("email").value;
-  if((vorname!="")&&(nachname!="")&&(geburtsdatum!="")&&(email!="")&&(email.includes("@"))&&(geburtsdatum.includes("."))){
+  if((vorname!="")&&(nachname!="")&&(geburtsdatum!="")&&(email!="")){
     $("#paypal-button").fadeIn(1000);
-  }else{
-    $("#paypal-button").fadeOut(1000);
   }
 }
