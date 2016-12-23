@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> This is evolution</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.js"></script>
+</head>
+<body><canvas id="myCanvas" width="600" height="600">hello</canvas>
+  <div style="float:right;width:30%;height:auto;text-align:center;">
+    <div class="container" id="average"></div>
+    <div class="container" id="target"></div>
+    <div style="width:100%;height:auto;margin-top:20px;">
+      <input class="textfield" type="text" name="red" id="red" maxlength="3" placeholder="red" oninput="ChangeTarget()">
+      <input class="textfield" type="text" name="green" id="green" maxlength="3" placeholder="green" oninput="changeTarget()">
+      <input class="textfield" type="text" name="blue" id="blue" maxlength="3" placeholder="blue" oninput="changeTarget()">
+    </div>
+    <p>population: <a id="population"></a></p>
+    <p>mutationrate: <a id="mutation"></a></p>
+    <p>mutations: <a id="mutations"></a></p>
+    <p>generations: <a id="generations"></a></P>
+    <p> highest fitness: <a id="highest_fitness"></a></p>
+    <p> average fitness: <a id="average_fitness"></a></p>
+  </div>
+  <script type="text/javascript" src="sketch.js"></script>
+</body>
+</html>

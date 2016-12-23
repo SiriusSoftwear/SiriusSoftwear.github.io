@@ -1,0 +1,26 @@
+body{
+  margin:0px;
+  font-size: 30px;
+  font-family: 'Boogaloo';
+}
+.container{
+  margin-left: 10%;
+  width: 80%;
+  height:100px;
+  margin-top: 20px;
+}
+p{
+  margin-top: 20px;
+}
+.textfield {
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color:#3B3738;
+}
+input[type=text]:focus {
+  border-color: #3B3738;
+  border-style: solid;
+}
